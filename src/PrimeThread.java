@@ -1,5 +1,3 @@
-package snake_game;
-
 /**
  * Created with IntelliJ IDEA.
  * User: Plobzik
