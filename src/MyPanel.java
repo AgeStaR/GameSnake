@@ -12,7 +12,7 @@ import java.util.Vector;
 class MyPanel extends JPanel {
     private int h, w, hight, width;
     private boolean running;
-    Vector<Square> squares;
+    Vector<Block> blocks;
     Vector<Wall> walls;
     Vector<FieldWall> fieldWalls;
 
@@ -21,7 +21,7 @@ class MyPanel extends JPanel {
         this.h = -10;
         hight = 540;
         width = 550;
-        squares = new Vector();
+        blocks = new Vector();
         walls = new Vector();
         fieldWalls = new Vector();
         this.running = false;
@@ -44,10 +44,10 @@ class MyPanel extends JPanel {
     }
 
     public void addNewPiece() {
-        if (squares.isEmpty()) {
-            squares.add(new Square(width, hight));
+        if (blocks.isEmpty()) {
+            blocks.add(new Block(width, hight));
         } else {
-            squares.add(new Square(squares.get(squares.size() - 1).getX(), squares.get(squares.size() - 1).getY() + 10));
+            blocks.add(new Block(blocks.get(blocks.size() - 1).getX(), blocks.get(blocks.size() - 1).getY() + 10));
         }
     }
 
@@ -56,30 +56,30 @@ class MyPanel extends JPanel {
         super.paintComponent(g);
         Graphics2D g2 = (Graphics2D) g;
 
-        for (int i = squares.size() - 1; i > 0; i--) {
+        for (int i = blocks.size() - 1; i > 0; i--) {
             g2.setColor(Color.yellow);
-            squares.get(i).setX(squares.get(i - 1).getX());
-            squares.get(i).setY(squares.get(i - 1).getY());
-            g2.fill(squares.get(i).getShape());
+            blocks.get(i).setX(blocks.get(i - 1).getX());
+            blocks.get(i).setY(blocks.get(i - 1).getY());
+            g2.fill(blocks.get(i).getShape());
             g.setColor(Color.black);
-            g.drawRect(squares.get(i).getX(), squares.get(i).getY(), 10, 10);
+            g.drawRect(blocks.get(i).getX(), blocks.get(i).getY(), 10, 10);
         }
-        if (squares.isEmpty() == false) {
+        if (blocks.isEmpty() == false) {
             hight += h;
             width += w;
-            squares.firstElement().setX(width);
-            squares.firstElement().setY(hight);
+            blocks.firstElement().setX(width);
+            blocks.firstElement().setY(hight);
             g2.setColor(Color.red);
-            g2.fill(squares.firstElement().getShape());
+            g2.fill(blocks.firstElement().getShape());
             g.setColor(Color.black);
-            g.drawRect(squares.firstElement().getX(), squares.firstElement().getY(), 10, 10);
+            g.drawRect(blocks.firstElement().getX(), blocks.firstElement().getY(), 10, 10);
         }
         for (int i = 0; i < this.walls.size(); i++) {
             g2.setColor(Color.gray);
             g2.fill(walls.get(i).getShape());
 
-            if ((((int) (walls.get(i).getX() / 10)) * 10) == (((int) (squares.firstElement().getX() / 10)) * 10)
-                    || (((int) (walls.get(i).getY() / 10)) * 10) == (((int) (squares.firstElement().getY() / 10))) * 10) {
+            if ((((int) (walls.get(i).getX() / 10)) * 10) == (((int) (blocks.firstElement().getX() / 10)) * 10)
+                    || (((int) (walls.get(i).getY() / 10)) * 10) == (((int) (blocks.firstElement().getY() / 10))) * 10) {
                 System.out.println("Zone!!!");
                 this.running = false;
             }
@@ -89,10 +89,10 @@ class MyPanel extends JPanel {
             g2.setColor(Color.gray);
             g2.fill(this.fieldWalls.get(i).getShape());
 
-            if (squares.firstElement().getX() + 5 <= this.fieldWalls.get(i).getX() + this.fieldWalls.get(i).getXsize() &&
-                    squares.firstElement().getX() + 5 >= this.fieldWalls.get(i).getX() &&
-                    squares.firstElement().getY() + 5 > this.fieldWalls.get(i).getY() &&
-                    squares.firstElement().getY() + 5 < this.fieldWalls.get(i).getY() + this.fieldWalls.get(i).getYsize()) {
+            if (blocks.firstElement().getX() + 5 <= this.fieldWalls.get(i).getX() + this.fieldWalls.get(i).getXsize() &&
+                    blocks.firstElement().getX() + 5 >= this.fieldWalls.get(i).getX() &&
+                    blocks.firstElement().getY() + 5 > this.fieldWalls.get(i).getY() &&
+                    blocks.firstElement().getY() + 5 < this.fieldWalls.get(i).getY() + this.fieldWalls.get(i).getYsize()) {
                 System.out.println("Zone!!!" + i);
                 this.running = false;
             }
