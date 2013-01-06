@@ -1,7 +1,8 @@
+import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
-public class Snake
+public class Snake extends JPanel
 {
     private final static int DEFAULT_SNAKE_SIZE = 3;
     private ArrayList<Block> body;
@@ -40,7 +41,7 @@ public class Snake
         }
         g.setColor(Color.red);
         g.fill(new Rectangle(body.get(0).getX(), body.get(0).getY(), Block.WIDTH, Block.HEIGTH));
-            
+
     }
 
     public void move()
@@ -88,5 +89,17 @@ public class Snake
     public Direction getDirection()
     {
         return direction;
+    }
+
+    @Override
+    public void paintComponent(Graphics g) {
+        super.paintComponents(g);    //To change body of overridden methods use File | Settings | File Templates.
+
+        g.setColor(Color.green);
+        for (int i = 1; i < body.size(); i++) {
+            g.fillRect(body.get(i).getX(), body.get(i).getY(), Block.WIDTH, Block.HEIGTH);
+        }
+        g.setColor(Color.red);
+        g.fillRect(body.get(0).getX(), body.get(0).getY(), Block.WIDTH, Block.HEIGTH);
     }
 }

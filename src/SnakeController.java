@@ -26,15 +26,19 @@ public class SnakeController implements KeyListener {
         //To change body of implemented methods use File | Settings | File Templates.
         switch (e.getKeyCode()) {
             case KeyEvent.VK_UP:
+                snake.setDirection(Direction.Up);
                 break;
 
             case KeyEvent.VK_DOWN:
+                snake.setDirection(Direction.Down);
                 break;
 
             case KeyEvent.VK_LEFT:
+                snake.setDirection(Direction.Left);
                 break;
 
             case KeyEvent.VK_RIGHT:
+                snake.setDirection(Direction.Right);
                 break;
         }
     }
