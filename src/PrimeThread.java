@@ -1,13 +1,17 @@
 class PrimeThread extends Thread {
+    World world;
     MyPanel panel;
 
-    PrimeThread(MyPanel panel) {
+    PrimeThread(World world,MyPanel panel ) {
+        this.world = world;
         this.panel = panel;
     }
+    
 
     public void run() {
         try {
-            while (panel.getRunning()) {
+            while (true) {
+                world.tick();
                 panel.repaint();
                 Thread.sleep(150);
             }

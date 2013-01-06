@@ -1,18 +1,21 @@
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 class MyFrame extends JFrame {
     MyPanel snakePanel;
     JMenuBar menuBar;
     JMenu menu;
     JMenuItem menuItem, menuItemStart, menuAddPiece;
+    Snake snake;
+    World world;
 
     MyFrame() {
-        snakePanel = new MyPanel();
+        initWorld();
+        snakePanel = new MyPanel(snake, world);
         snakePanel.setBackground(Color.LIGHT_GRAY);
         snakePanel.repaint();
-        initWalls();
         menuBar = new JMenuBar();
         menuItem = new JMenuItem("Exit");
         menuItemStart = new JMenuItem("Start");
@@ -44,7 +47,6 @@ class MyFrame extends JFrame {
 
             @Override
             public void actionPerformed(ActionEvent e) {
-                snakePanel.addNewPiece();
                 snakePanel.repaint();
             }
         });
@@ -52,20 +54,20 @@ class MyFrame extends JFrame {
         this.addKeyListener(new KeyAdapter() {
             @Override
             public void keyPressed(KeyEvent e) {
-                switch (e.getKeyCode()) {
-                    case KeyEvent.VK_DOWN:
-                        turnDown();
-                        break;
-                    case KeyEvent.VK_UP:
-                        turnUp();
-                        break;
-                    case KeyEvent.VK_LEFT:
-                        turnLeft();
-                        break;
-                    case KeyEvent.VK_RIGHT:
-                        turnRight();
-                        break;
-                }
+//                switch (e.getKeyCode()) {
+//                    case KeyEvent.VK_DOWN:
+//                        turnDown();
+//                        break;
+//                    case KeyEvent.VK_UP:
+//                        turnUp();
+//                        break;
+//                    case KeyEvent.VK_LEFT:
+//                        turnLeft();
+//                        break;
+//                    case KeyEvent.VK_RIGHT:
+//                        turnRight();
+//                        break;
+//                }
             }
         });
         this.addMouseListener(new MouseAdapter() {
@@ -77,10 +79,6 @@ class MyFrame extends JFrame {
             }
         });
 
-        snakePanel.addNewPiece();
-        snakePanel.addNewPiece();
-        snakePanel.addNewPiece();
-
         setSize(595, 645);
         setLocation(500, 200);
         setResizable(false);
@@ -88,40 +86,41 @@ class MyFrame extends JFrame {
         setVisible(true);
     }
 
-    private void initWalls() {
-        snakePanel.addWall(new Wall(0, 0, 600, 20));
-        snakePanel.addWall(new Wall(0, 0, 20, 600));
-        snakePanel.addWall(new Wall(0, 571, 600, 600));
-        snakePanel.addWall(new Wall(571, 0, 600, 600));
-        snakePanel.addWall(new Wall(0, 100, 400, 10));
-        snakePanel.addWall(new Wall(80, 300, 350, 10));
-        snakePanel.addWall(new Wall(150, 500, 350, 10));
-        snakePanel.repaint();
+    private void initWorld() {
+        ArrayList<Wall> walls = new ArrayList<Wall>();
+        walls.add(new Wall(0, 0, 600, 20));
+        walls.add(new Wall(0, 0, 20, 600));
+        walls.add(new Wall(0, 571, 600, 600));
+        walls.add(new Wall(571, 0, 600, 600));
+        walls.add(new Wall(0, 100, 400, 10));
+        walls.add(new Wall(80, 300, 350, 10));
+        walls.add(new Wall(150, 500, 350, 10));
+        this.snake = new Snake();
+        this.world = new World(snake, walls);
     }
 
     private void start() {
-        PrimeThread thread = new PrimeThread(this.snakePanel);
-        this.snakePanel.setRunning(true);
+        PrimeThread thread = new PrimeThread(world ,this.snakePanel);
         thread.start();
     }
 
-    private void turnLeft() {
-        snakePanel.setH(0);
-        snakePanel.setW(-10);
-    }
-
-    private void turnRight() {
-        snakePanel.setH(0);
-        snakePanel.setW(10);
-    }
-
-    private void turnUp() {
-        snakePanel.setH(-10);
-        snakePanel.setW(0);
-    }
-
-    private void turnDown() {
-        snakePanel.setH(10);
-        snakePanel.setW(0);
-    }
+//    private void turnLeft() {
+//        snakePanel.setH(0);
+//        snakePanel.setW(-10);
+//    }
+//
+//    private void turnRight() {
+//        snakePanel.setH(0);
+//        snakePanel.setW(10);
+//    }
+//
+//    private void turnUp() {
+//        snakePanel.setH(-10);
+//        snakePanel.setW(0);
+//    }
+//
+//    private void turnDown() {
+//        snakePanel.setH(10);
+//        snakePanel.setW(0);
+//    }
 }

@@ -1,11 +1,12 @@
+import java.util.ArrayList;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 public class CollisionDetector
 {
     private Snake snake;
-    private Wall[] walls;
+    private ArrayList<Wall> walls;
 
-    public CollisionDetector(Snake snake, Wall[] walls)
+    public CollisionDetector(Snake snake, ArrayList<Wall> walls)
     {
         this.snake = snake;
         this.walls = walls;

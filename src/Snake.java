@@ -10,6 +10,9 @@ public class Snake
     public Snake()
     {
         body = new ArrayList<Block>(DEFAULT_SNAKE_SIZE);
+        body.add(new Block(550, 540));
+        body.add(new Block(body.get(body.size() - 1).getX(), body.get(body.size() - 1).getY() + 10));
+        body.add(new Block(body.get(body.size() - 1).getX(), body.get(body.size() - 1).getY() + 10));
     }
 
     public void increase()
@@ -31,8 +34,13 @@ public class Snake
 
     public void draw(Graphics2D g)
     {
-        for (Block block : body)
-            g.fill(new Rectangle(block.getX(), block.getY(), Block.WIDTH, Block.HEIGTH));
+        g.setColor(Color.green);
+        for (int i = 1; i < body.size(); i++) {
+            g.fill(new Rectangle(body.get(i).getX(), body.get(i).getY(), Block.WIDTH, Block.HEIGTH));
+        }
+        g.setColor(Color.red);
+        g.fill(new Rectangle(body.get(0).getX(), body.get(0).getY(), Block.WIDTH, Block.HEIGTH));
+            
     }
 
     public void move()
@@ -58,12 +66,14 @@ public class Snake
                 dx = Block.WIDTH;
                 break;
         }
-
-        for (Block block : body)
-        {
-            block.setX(block.getX() + dx);
-            block.setY(block.getY() + dy);
+        
+        
+        for (int i = body.size() - 1; i > 0; i--) {
+            body.get(i).setX(body.get(i - 1).getX());
+            body.get(i).setY(body.get(i - 1).getY());
         }
+        body.get(0).setX(body.get(0).getX()+dx);         // Head
+        body.get(0).setY(body.get(0).getY()+dy);
     }
 
     public void setDirection(Direction direction)
