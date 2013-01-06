@@ -9,6 +9,10 @@ import java.awt.geom.Rectangle2D;
  */
 class Block {
 
+    public static final int WIDTH = 10;
+    public static final int HEIGTH = 10;
+    private int x, y;
+
     Block(int x, int y) {
         this.x = x;
         this.y = y;
@@ -33,8 +37,4 @@ class Block {
     Rectangle2D getShape() {
         return new Rectangle2D.Double(x, y, WIDTH, HEIGTH);
     }
-
-    private static final int WIDTH = 10;
-    private static final int HEIGTH = 10;
-    private int x, y;
 }
