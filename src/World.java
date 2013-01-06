@@ -4,16 +4,19 @@ public class World
 {
     private Snake snake;
     private Wall[] walls;
+    CollisionDetector collisionDetector;
 
     public World(Snake snake, Wall[] walls)
     {
         this.snake = snake;
         this.walls = walls;
+        collisionDetector = new CollisionDetector(snake, walls);
     }
 
     // Здесь обрабатываются столкновения и передвижения змеи. Лучшего названия придумать не смог. :(
     public void tick()
     {
+        snake.move();
         throw new NotImplementedException();
     }
     

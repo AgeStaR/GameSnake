@@ -1,6 +1,5 @@
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-// Обработчик столкновений. Не миру же обрабатывать столкновения.
 public class CollisionDetector
 {
     private Snake snake;

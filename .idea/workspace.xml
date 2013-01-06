@@ -2,34 +2,28 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0b21a58-f0c9-4d29-b544-deff6840c026" name="Default" comment="">
-      <change type="DELETED" beforePath="C:\Users\Plobzik\Documents\GitHub\GameSnake\src\FieldWall.java" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Block.java" afterPath="$PROJECT_DIR$/src/Block.java" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/CollisionDetector.java" afterPath="$PROJECT_DIR$/src/CollisionDetector.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Direction.java" afterPath="$PROJECT_DIR$/src/Direction.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyFrame.java" afterPath="$PROJECT_DIR$/src/MyFrame.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/MyPanel.java" afterPath="$PROJECT_DIR$/src/MyPanel.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/PrimeThread.java" afterPath="$PROJECT_DIR$/src/PrimeThread.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Snake.java" afterPath="$PROJECT_DIR$/src/Snake.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Snake_Game.java" afterPath="$PROJECT_DIR$/src/Snake_Game.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wall.java" afterPath="$PROJECT_DIR$/src/Wall.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/World.java" afterPath="$PROJECT_DIR$/src/World.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="GameSnake.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357477645061" ignored="false" />
+    <file path="/Dummy.txt" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357485377603" ignored="false" />
     <file path="/*.regexp" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357415342345" ignored="false" />
     <file path="/fragment.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357434371036" ignored="false" />
     <file path="/Snake_Game.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357415421079" ignored="false" />
     <file path="/Square.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357422515969" ignored="false" />
     <file path="/Snake.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357433021679" ignored="false" />
-    <file path="/World.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357434288563" ignored="false" />
+    <file path="/World.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357485599905" ignored="false" />
     <file path="/Drawable.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357433006324" ignored="false" />
     <file path="/CollisionDetector.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357434326671" ignored="false" />
     <file path="/Block.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357434333917" ignored="false" />
     <file path="/Direction.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357434622687" ignored="false" />
     <file path="/PrimeThread.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357434426341" ignored="false" />
     <file path="/Wall.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357477626588" ignored="false" />
+    <file path="/Game.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357486128678" ignored="false" />
+    <file path="/Controller.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357486499253" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -44,7 +38,6 @@
     <disable_hints />
   </component>
   <component name="DebuggerManager">
-    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_any default_suspend_policy="SuspendAll" default_condition_enabled="true">
       <breakpoint>
         <option name="NOTIFY_CAUGHT" value="true" />
@@ -79,6 +72,7 @@
         <option name="LOG_MESSAGE" value="" />
       </breakpoint>
     </breakpoint_any>
+    <ui_properties default_suspend_policy="SuspendAll" default_condition_enabled="true" />
     <breakpoint_rules />
     <ui_properties />
   </component>
@@ -91,7 +85,19 @@
       <file leaf-file-name="Snake_Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Snake_Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="13" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
+            <state line="8" column="22" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+              <folding>
+                <element signature="e#130#271#0" expanded="true" />
+                <element signature="e#260#261#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Wall.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Wall.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="29" column="21" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -100,7 +106,7 @@
       <file leaf-file-name="Snake.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Snake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="40" column="19" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -115,17 +121,17 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MyPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyPanel.java">
+      <file leaf-file-name="MyFrame.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+            <state line="17" column="47" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Direction.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Direction.java">
+      <file leaf-file-name="MyPanel.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/MyPanel.java">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -136,16 +142,7 @@
       <file leaf-file-name="CollisionDetector.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/CollisionDetector.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Block.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/Block.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="4" column="30" selection-start="119" selection-end="119" vertical-scroll-proportion="0.092517">
+            <state line="18" column="0" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -154,17 +151,28 @@
       <file leaf-file-name="World.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="60" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
+            <state line="18" column="21" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Wall.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/Wall.java">
+      <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="21" selection-start="544" selection-end="544" vertical-scroll-proportion="0.0">
+            <state line="11" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
               <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SnakeController.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/SnakeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="12" column="24" selection-start="301" selection-end="301" vertical-scroll-proportion="0.2857143">
+              <folding>
+                <element signature="imports" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -193,7 +201,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/Snake_Game.java" />
         <option value="$PROJECT_DIR$/src/Square.java" />
         <option value="$PROJECT_DIR$/src/Drawable.java" />
         <option value="$PROJECT_DIR$/src/Snake_Game.java" />
@@ -202,10 +209,14 @@
         <option value="$PROJECT_DIR$/src/MyPanel.java" />
         <option value="$PROJECT_DIR$/src/PrimeThread.java" />
         <option value="$PROJECT_DIR$/src/Snake.java" />
-        <option value="$PROJECT_DIR$/src/World.java" />
         <option value="$PROJECT_DIR$/src/Block.java" />
-        <option value="$PROJECT_DIR$/src/CollisionDetector.java" />
         <option value="$PROJECT_DIR$/src/Wall.java" />
+        <option value="$PROJECT_DIR$/src/CollisionDetector.java" />
+        <option value="$PROJECT_DIR$/src/World.java" />
+        <option value="$PROJECT_DIR$/src/Input.java" />
+        <option value="$PROJECT_DIR$/src/Game.java" />
+        <option value="$PROJECT_DIR$/src/Controller.java" />
+        <option value="$PROJECT_DIR$/src/SnakeController.java" />
       </list>
     </option>
   </component>
@@ -244,34 +255,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameSnake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameSnake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameSnake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="GameSnake" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="snake_game" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -306,6 +289,34 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane">
+        <subPane>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameSnake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameSnake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameSnake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="GameSnake" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageViewModuleNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="snake_game" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PackageElementNode" />
+            </PATH_ELEMENT>
+          </PATH>
+        </subPane>
+      </pane>
       <pane id="Scope" />
     </panes>
   </component>
@@ -324,13 +335,13 @@
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="restartRequiresConfirmation" value="true" />
-    <property name="MemberChooser.showClasses" value="true" />
     <property name="Repository.Attach.Sources" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
-    <property name="options.searchVisible" value="true" />
-    <property name="dynamic.classpath" value="false" />
     <property name="Downloaded.Files.Path" value="C:\Users\Plobzik\Documents\GitHub\GameSnake\lib" />
+    <property name="dynamic.classpath" value="false" />
+    <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
@@ -357,12 +368,6 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
-      <module name="" />
-      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
-      <option name="PROGRAM_PARAMETERS" />
-      <method />
-    </configuration>
     <configuration default="true" type="GroovyScriptRunConfiguration" factoryName="Groovy">
       <module name="" />
       <setting name="path" value="" />
@@ -370,6 +375,12 @@
       <setting name="params" value="" />
       <setting name="workDir" value="C:\Users\Plobzik\Documents\GitHub\GameSnake" />
       <setting name="debug" value="false" />
+      <method />
+    </configuration>
+    <configuration default="true" type="#org.jetbrains.idea.devkit.run.PluginConfigurationType" factoryName="Plugin">
+      <module name="" />
+      <option name="VM_PARAMETERS" value="-Xmx512m -Xms256m -XX:MaxPermSize=250m" />
+      <option name="PROGRAM_PARAMETERS" />
       <method />
     </configuration>
     <configuration default="true" type="MavenRunConfiguration" factoryName="Maven">
@@ -409,6 +420,19 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <method />
+    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -434,19 +458,6 @@
       <envs />
       <properties />
       <listeners />
-      <method />
-    </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -540,7 +551,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1550" height="916" extended-state="6" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -636,7 +647,10 @@
     <entry file="file://$PROJECT_DIR$/src/Snake_Game.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="71" column="0" selection-start="1497" selection-end="1497" vertical-scroll-proportion="0.0">
-          <folding />
+          <folding>
+            <element signature="e#130#271#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -650,17 +664,48 @@
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/Direction.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/World.java">
+    <entry file="file://$PROJECT_DIR$/src/Block.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="60" selection-start="597" selection-end="597" vertical-scroll-proportion="0.0">
+        <state line="9" column="26" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/CollisionDetector.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="18" column="0" selection-start="377" selection-end="377" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Snake.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="40" column="19" selection-start="1175" selection-end="1175" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="0" selection-start="212" selection-end="212" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Snake_Game.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="8" column="22" selection-start="223" selection-end="223" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#130#271#0" expanded="true" />
+            <element signature="e#260#261#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -671,16 +716,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Snake_Game.java">
+    <entry file="file://$PROJECT_DIR$/src/World.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="13" selection-start="36" selection-end="36" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Snake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="18" column="21" selection-start="540" selection-end="540" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -699,24 +737,19 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Direction.java">
+    <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
+        <state line="17" column="47" selection-start="492" selection-end="492" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/CollisionDetector.java">
+    <entry file="file://$PROJECT_DIR$/src/SnakeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="30" selection-start="119" selection-end="119" vertical-scroll-proportion="0.092517">
-          <folding />
+        <state line="12" column="24" selection-start="301" selection-end="301" vertical-scroll-proportion="0.2857143">
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
