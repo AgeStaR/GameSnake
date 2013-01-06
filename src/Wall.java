@@ -1,12 +1,7 @@
+package snake_game;
+
 import java.awt.geom.Rectangle2D;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Plobzik
- * Date: 06.01.13
- * Time: 0:09
- * To change this template use File | Settings | File Templates.
- */
 class Wall {
     protected int x, y, xsize, ysize;
 
@@ -27,5 +22,13 @@ class Wall {
 
     public int getY() {
         return y;
+    }
+    
+    public int getXsize() {
+        return xsize;
+    }
+
+    public int getYsize() {
+        return ysize;
     }
 }

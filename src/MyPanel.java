@@ -1,20 +1,15 @@
-import javax.swing.*;
+package snake_game;
+
 import java.awt.*;
 import java.util.Vector;
+import javax.swing.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Plobzik
- * Date: 06.01.13
- * Time: 0:09
- * To change this template use File | Settings | File Templates.
- */
+
 class MyPanel extends JPanel {
     private int h, w, hight, width;
     private boolean running;
     Vector<Block> blocks;
     Vector<Wall> walls;
-    Vector<FieldWall> fieldWalls;
 
     public MyPanel() {
         setBorder(BorderFactory.createLineBorder(Color.black));
@@ -23,7 +18,6 @@ class MyPanel extends JPanel {
         width = 550;
         blocks = new Vector();
         walls = new Vector();
-        fieldWalls = new Vector();
         this.running = false;
     }
 
@@ -37,10 +31,6 @@ class MyPanel extends JPanel {
 
     public void addWall(Wall wall) {
         this.walls.add(wall);
-    }
-
-    public void addFielsWall(FieldWall fieldWall) {
-        this.fieldWalls.add(fieldWall);
     }
 
     public void addNewPiece() {
@@ -74,25 +64,15 @@ class MyPanel extends JPanel {
             g.setColor(Color.black);
             g.drawRect(blocks.firstElement().getX(), blocks.firstElement().getY(), 10, 10);
         }
+
         for (int i = 0; i < this.walls.size(); i++) {
             g2.setColor(Color.gray);
-            g2.fill(walls.get(i).getShape());
+            g2.fill(this.walls.get(i).getShape());
 
-            if ((((int) (walls.get(i).getX() / 10)) * 10) == (((int) (blocks.firstElement().getX() / 10)) * 10)
-                    || (((int) (walls.get(i).getY() / 10)) * 10) == (((int) (blocks.firstElement().getY() / 10))) * 10) {
-                System.out.println("Zone!!!");
-                this.running = false;
-            }
-        }
-
-        for (int i = 0; i < this.fieldWalls.size(); i++) {
-            g2.setColor(Color.gray);
-            g2.fill(this.fieldWalls.get(i).getShape());
-
-            if (blocks.firstElement().getX() + 5 <= this.fieldWalls.get(i).getX() + this.fieldWalls.get(i).getXsize() &&
-                    blocks.firstElement().getX() + 5 >= this.fieldWalls.get(i).getX() &&
-                    blocks.firstElement().getY() + 5 > this.fieldWalls.get(i).getY() &&
-                    blocks.firstElement().getY() + 5 < this.fieldWalls.get(i).getY() + this.fieldWalls.get(i).getYsize()) {
+            if (blocks.firstElement().getX() + 5 <= this.walls.get(i).getX() + this.walls.get(i).getXsize() &&
+                    blocks.firstElement().getX() + 5 >= this.walls.get(i).getX() &&
+                    blocks.firstElement().getY() + 5 > this.walls.get(i).getY() &&
+                    blocks.firstElement().getY() + 5 < this.walls.get(i).getY() + this.walls.get(i).getYsize()) {
                 System.out.println("Zone!!!" + i);
                 this.running = false;
             }

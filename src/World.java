@@ -1,15 +1,7 @@
+package snake_game;
+
+import java.awt.Graphics;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
-
-import javax.swing.*;
-import java.awt.*;
-
-/**
- * Created with IntelliJ IDEA.
- * User: Plobzik
- * Date: 06.01.13
- * Time: 1:32
- * To change this template use File | Settings | File Templates.
- */
 public class World
 {
     private Snake snake;
@@ -25,5 +17,10 @@ public class World
     public void tick()
     {
         throw new NotImplementedException();
+    }
+    
+    public void draw(Graphics g) {
+        for (Wall wall : walls) 
+            g.fillRect(wall.getX(), wall.getY(), wall.getXsize(), wall.getYsize());
     }
 }

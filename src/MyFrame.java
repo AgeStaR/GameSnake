@@ -1,14 +1,9 @@
+package snake_game;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Plobzik
- * Date: 06.01.13
- * Time: 0:09
- * To change this template use File | Settings | File Templates.
- */
 class MyFrame extends JFrame {
     MyPanel snakePanel;
     JMenuBar menuBar;
@@ -20,7 +15,6 @@ class MyFrame extends JFrame {
         snakePanel.setBackground(Color.LIGHT_GRAY);
         snakePanel.repaint();
         initWalls();
-        initFieldWalls();
         menuBar = new JMenuBar();
         menuItem = new JMenuItem("Exit");
         menuItemStart = new JMenuItem("Start");
@@ -101,13 +95,10 @@ class MyFrame extends JFrame {
         snakePanel.addWall(new Wall(0, 0, 20, 600));
         snakePanel.addWall(new Wall(0, 571, 600, 600));
         snakePanel.addWall(new Wall(571, 0, 600, 600));
+        snakePanel.addWall(new Wall(0, 100, 400, 10));
+        snakePanel.addWall(new Wall(80, 300, 350, 10));
+        snakePanel.addWall(new Wall(150, 500, 350, 10));
         snakePanel.repaint();
-    }
-
-    private void initFieldWalls() {
-        snakePanel.addFielsWall(new FieldWall(0, 100, 400, 10));
-        snakePanel.addFielsWall(new FieldWall(80, 300, 350, 10));
-        snakePanel.addFielsWall(new FieldWall(150, 500, 350, 10));
     }
 
     private void start() {

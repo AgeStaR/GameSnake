@@ -1,10 +1,5 @@
-/**
- * Created with IntelliJ IDEA.
- * User: Plobzik
- * Date: 06.01.13
- * Time: 0:09
- * To change this template use File | Settings | File Templates.
- */
+package snake_game;
+
 class PrimeThread extends Thread {
     MyPanel panel;
 

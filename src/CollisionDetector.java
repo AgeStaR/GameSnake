@@ -1,12 +1,6 @@
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+package snake_game;
 
-/**
- * Created with IntelliJ IDEA.
- * User: Plobzik
- * Date: 06.01.13
- * Time: 4:48
- * To change this template use File | Settings | File Templates.
- */
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 // Обработчик столкновений. Не миру же обрабатывать столкновения.
 public class CollisionDetector
