@@ -1,5 +1,3 @@
-package snake_game;
-
 import java.awt.*;
 import java.util.*;
 

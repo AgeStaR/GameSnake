@@ -1,5 +1,3 @@
-package snake_game;
-
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
 // Обработчик столкновений. Не миру же обрабатывать столкновения.

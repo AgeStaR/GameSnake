@@ -1,5 +1,3 @@
-package snake_game;
-
 import java.awt.Graphics;
 import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 public class World
@@ -21,6 +19,6 @@ public class World
     
     public void draw(Graphics g) {
         for (Wall wall : walls) 
-            g.fillRect(wall.getX(), wall.getY(), wall.getXsize(), wall.getYsize());
+            g.fillRect(wall.getX(), wall.getY(), wall.getWidth(), wall.getHeight());
     }
 }

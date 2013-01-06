@@ -1,5 +1,3 @@
-package snake_game;
-
 class PrimeThread extends Thread {
     MyPanel panel;
 

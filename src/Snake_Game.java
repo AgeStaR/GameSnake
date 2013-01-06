@@ -1,4 +1,3 @@
-package snake_game;
 import javax.swing.*;
 
 public class Snake_Game {

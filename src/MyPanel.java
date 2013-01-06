@@ -1,5 +1,3 @@
-package snake_game;
-
 import java.awt.*;
 import java.util.Vector;
 import javax.swing.*;
@@ -69,10 +67,10 @@ class MyPanel extends JPanel {
             g2.setColor(Color.gray);
             g2.fill(this.walls.get(i).getShape());
 
-            if (blocks.firstElement().getX() + 5 <= this.walls.get(i).getX() + this.walls.get(i).getXsize() &&
+            if (blocks.firstElement().getX() + 5 <= this.walls.get(i).getX() + this.walls.get(i).getWidth() &&
                     blocks.firstElement().getX() + 5 >= this.walls.get(i).getX() &&
                     blocks.firstElement().getY() + 5 > this.walls.get(i).getY() &&
-                    blocks.firstElement().getY() + 5 < this.walls.get(i).getY() + this.walls.get(i).getYsize()) {
+                    blocks.firstElement().getY() + 5 < this.walls.get(i).getY() + this.walls.get(i).getHeight()) {
                 System.out.println("Zone!!!" + i);
                 this.running = false;
             }

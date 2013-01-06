@@ -1,5 +1,3 @@
-package snake_game;
-
 import java.awt.geom.Rectangle2D;
 class Block {
 
