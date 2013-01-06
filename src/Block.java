@@ -25,8 +25,4 @@ class Block {
     void setY(int y) {
         this.y = y;
     }
-
-    Rectangle2D getShape() {
-        return new Rectangle2D.Double(x, y, WIDTH, HEIGTH);
-    }
 }

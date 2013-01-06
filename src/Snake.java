@@ -2,7 +2,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.util.*;
 
-public class Snake extends JPanel
+public class Snake
 {
     private final static int DEFAULT_SNAKE_SIZE = 3;
     private ArrayList<Block> body;
@@ -33,14 +33,20 @@ public class Snake extends JPanel
         body.add(block);
     }
 
-    public void draw(Graphics2D g)
+    public void draw(Graphics g)
     {
-        g.setColor(Color.green);
         for (int i = 1; i < body.size(); i++) {
-            g.fill(new Rectangle(body.get(i).getX(), body.get(i).getY(), Block.WIDTH, Block.HEIGTH));
+            int x = body.get(i).getX();
+            int y = body.get(i).getY();
+            g.setColor(Color.GREEN);
+            g.fillRect(x, y, Block.WIDTH, Block.HEIGTH);
+            g.setColor(Color.BLACK);
+            g.drawRect(x, y, Block.WIDTH, Block.HEIGTH);
         }
         g.setColor(Color.red);
-        g.fill(new Rectangle(body.get(0).getX(), body.get(0).getY(), Block.WIDTH, Block.HEIGTH));
+        g.fillRect(body.get(0).getX(), body.get(0).getY(), Block.WIDTH, Block.HEIGTH);
+        g.setColor(Color.BLACK);
+        g.drawRect(body.get(0).getX(), body.get(0).getY(), Block.WIDTH, Block.HEIGTH);
 
     }
 
@@ -89,21 +95,5 @@ public class Snake extends JPanel
     public Direction getDirection()
     {
         return direction;
-    }
-
-    @Override
-    public void paintComponent(Graphics g) {
-        super.paintComponents(g);    //To change body of overridden methods use File | Settings | File Templates.
-
-        for (int i = 1; i < body.size(); i++) {
-            int x = body.get(i).getX();
-            int y = body.get(i).getY();
-            g.setColor(Color.GREEN);
-            g.fillRect(x, y, Block.WIDTH, Block.HEIGTH);
-            g.setColor(Color.BLACK);
-            g.drawRect(x, y, Block.WIDTH, Block.HEIGTH);
-        }
-        g.setColor(Color.red);
-        g.fillRect(body.get(0).getX(), body.get(0).getY(), Block.WIDTH, Block.HEIGTH);
     }
 }

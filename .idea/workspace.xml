@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="a0b21a58-f0c9-4d29-b544-deff6840c026" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/MainFrame.java" />
-      <change type="DELETED" beforePath="C:\Users\Plobzik\Documents\GitHub\GameSnake\src\MyFrame.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Plobzik\Documents\GitHub\GameSnake\src\Screen.java" afterPath="" />
-      <change type="DELETED" beforePath="C:\Users\Plobzik\Documents\GitHub\GameSnake\src\Snake_Game.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Plobzik\Documents\GitHub\GameSnake\src\MyPanel.java" afterPath="" />
+      <change type="DELETED" beforePath="C:\Users\Plobzik\Documents\GitHub\GameSnake\src\PrimeThread.java" afterPath="" />
+      <change type="MOVED" beforePath="C:\Users\Plobzik\Documents\GitHub\GameSnake\src\MyFrame.java" afterPath="$PROJECT_DIR$/src/MainFrame.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Block.java" afterPath="$PROJECT_DIR$/src/Block.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Game.java" afterPath="$PROJECT_DIR$/src/Game.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Snake.java" afterPath="$PROJECT_DIR$/src/Snake.java" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/Wall.java" afterPath="$PROJECT_DIR$/src/Wall.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/World.java" afterPath="$PROJECT_DIR$/src/World.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
@@ -18,19 +19,19 @@
     <file path="/fragment.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357486818782" ignored="false" />
     <file path="/Snake_Game.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357415421079" ignored="false" />
     <file path="/Square.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357422515969" ignored="false" />
-    <file path="/Snake.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357504419675" ignored="false" />
+    <file path="/Snake.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357507949262" ignored="false" />
     <file path="/World.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357505240789" ignored="false" />
     <file path="/Drawable.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357433006324" ignored="false" />
     <file path="/CollisionDetector.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357434326671" ignored="false" />
     <file path="/Block.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357434333917" ignored="false" />
     <file path="/Direction.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357434622687" ignored="false" />
     <file path="/PrimeThread.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357504552982" ignored="false" />
-    <file path="/Wall.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357477626588" ignored="false" />
-    <file path="/Game.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357505308218" ignored="false" />
+    <file path="/Wall.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357508876457" ignored="false" />
+    <file path="/Game.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357507484943" ignored="false" />
     <file path="/Controller.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357486719712" ignored="false" />
-    <file path="/Screen.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357493974120" ignored="false" />
-    <file path="/SnakeController.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357492328564" ignored="false" />
-    <file path="/MainFrame.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357505385366" ignored="false" />
+    <file path="/Screen.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357505825138" ignored="false" />
+    <file path="/SnakeController.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357508492962" ignored="false" />
+    <file path="/MainFrame.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357507726219" ignored="false" />
     <file path="/Main.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357503815319" ignored="false" />
     <file path="/MyPanel.java" changelist="a0b21a58-f0c9-4d29-b544-deff6840c026" time="1357504854420" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -95,25 +96,25 @@
       <file leaf-file-name="Wall.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Wall.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="5" column="30" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
+            <state line="10" column="5" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="PrimeThread.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/PrimeThread.java">
+      <file leaf-file-name="Block.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="14" column="32" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
+            <state line="26" column="5" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="World.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="World.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/World.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="22" column="19" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+            <state line="16" column="35" selection-start="399" selection-end="399" vertical-scroll-proportion="-0.00407332">
               <folding />
             </state>
           </provider>
@@ -122,21 +123,8 @@
       <file leaf-file-name="Snake.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Snake.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="100" column="34" selection-start="3173" selection-end="3173" vertical-scroll-proportion="0.0">
+            <state line="91" column="39" selection-start="2979" selection-end="2979" vertical-scroll-proportion="0.0">
               <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyFrame.java" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="62" column="130" selection-start="1760" selection-end="1760" vertical-scroll-proportion="1.4887984">
-              <folding>
-                <element signature="e#2641#2766#0" expanded="true" />
-                <element signature="e#2755#2756#0" expanded="true" />
-                <element signature="e#2776#2807#0" expanded="false" />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -144,11 +132,26 @@
       <file leaf-file-name="MainFrame.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="15" column="19" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+            <state line="5" column="6" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#484#609#0" expanded="true" />
-                <element signature="e#598#599#0" expanded="true" />
+                <element signature="imports" expanded="true" />
+                <element signature="e#933#1088#0" expanded="true" />
+                <element signature="e#1077#1078#0" expanded="true" />
+                <element signature="e#1256#1469#0" expanded="true" />
+                <element signature="e#1458#1459#0" expanded="true" />
+                <element signature="e#2528#2655#0" expanded="true" />
+                <element signature="e#2644#2645#0" expanded="true" />
+                <element signature="e#2665#2696#0" expanded="false" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="SnakeController.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/SnakeController.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -156,19 +159,10 @@
       <file leaf-file-name="Game.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/Game.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="5" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MyPanel.java" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/MyPanel.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="8" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
+            <state line="8" column="35" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
               <folding>
-                <element signature="e#133#170#0" expanded="false" />
-                <element signature="e#603#650#0" expanded="false" />
+                <element signature="e#188#609#0" expanded="true" />
+                <element signature="e#602#603#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -199,21 +193,21 @@
     <option name="changedFiles">
       <list>
         <option value="$PROJECT_DIR$/src/Direction.java" />
-        <option value="$PROJECT_DIR$/src/Block.java" />
-        <option value="$PROJECT_DIR$/src/Wall.java" />
         <option value="$PROJECT_DIR$/src/CollisionDetector.java" />
         <option value="$PROJECT_DIR$/src/Input.java" />
         <option value="$PROJECT_DIR$/src/Controller.java" />
-        <option value="$PROJECT_DIR$/src/SnakeController.java" />
-        <option value="$PROJECT_DIR$/src/Screen.java" />
         <option value="$PROJECT_DIR$/src/Main.java" />
-        <option value="$PROJECT_DIR$/src/Snake.java" />
         <option value="$PROJECT_DIR$/src/PrimeThread.java" />
-        <option value="$PROJECT_DIR$/src/MyPanel.java" />
         <option value="$PROJECT_DIR$/src/MyFrame.java" />
+        <option value="$PROJECT_DIR$/src/Screen.java" />
+        <option value="$PROJECT_DIR$/src/MyPanel.java" />
         <option value="$PROJECT_DIR$/src/World.java" />
         <option value="$PROJECT_DIR$/src/Game.java" />
         <option value="$PROJECT_DIR$/src/MainFrame.java" />
+        <option value="$PROJECT_DIR$/src/Snake.java" />
+        <option value="$PROJECT_DIR$/src/Block.java" />
+        <option value="$PROJECT_DIR$/src/Wall.java" />
+        <option value="$PROJECT_DIR$/src/SnakeController.java" />
       </list>
     </option>
   </component>
@@ -381,8 +375,8 @@
       <ConfigurationWrapper RunnerId="Run" />
       <method />
     </configuration>
-    <configuration default="false" name="MyFrame" type="Application" factoryName="Application" temporary="true">
-      <option name="MAIN_CLASS_NAME" value="MyFrame" />
+    <configuration default="false" name="MainFrame" type="Application" factoryName="Application" temporary="true">
+      <option name="MAIN_CLASS_NAME" value="MainFrame" />
       <option name="VM_PARAMETERS" value="" />
       <option name="PROGRAM_PARAMETERS" value="" />
       <option name="WORKING_DIRECTORY" value="file://$PROJECT_DIR$" />
@@ -542,13 +536,13 @@
     <list size="4">
       <item index="0" class="java.lang.String" itemvalue="Application.Snake_Game" />
       <item index="1" class="java.lang.String" itemvalue="Application.Game" />
-      <item index="2" class="java.lang.String" itemvalue="Application.MyFrame" />
+      <item index="2" class="java.lang.String" itemvalue="Application.MainFrame" />
       <item index="3" class="java.lang.String" itemvalue="Application.MainFrame" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.MainFrame" />
-        <item index="1" class="java.lang.String" itemvalue="Application.MyFrame" />
+        <item index="1" class="java.lang.String" itemvalue="Application.MainFrame" />
         <item index="2" class="java.lang.String" itemvalue="Application.Snake_Game" />
         <item index="3" class="java.lang.String" itemvalue="Application.Game" />
         <item index="4" class="java.lang.String" itemvalue="Application.Snake_Game" />
@@ -607,6 +601,7 @@
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.67193675" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32806325" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -621,7 +616,6 @@
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3188406" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32938075" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -695,13 +689,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="26" selection-start="218" selection-end="218" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/CollisionDetector.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="18" column="0" selection-start="422" selection-end="422" vertical-scroll-proportion="0.0">
@@ -712,13 +699,6 @@
     <entry file="jar://C:/Program Files/Java/jdk1.7.0_10/src.zip!/java/awt/EventQueue.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="679" column="0" selection-start="22741" selection-end="22741" vertical-scroll-proportion="0.33264464" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/SnakeController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="50" selection-start="1078" selection-end="1078" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Food.java">
@@ -735,69 +715,64 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/Wall.java">
+    <entry file="file://$PROJECT_DIR$/src/Block.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="5" column="30" selection-start="118" selection-end="118" vertical-scroll-proportion="0.0">
+        <state line="26" column="5" selection-start="418" selection-end="418" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/PrimeThread.java">
+    <entry file="file://$PROJECT_DIR$/src/SnakeController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="32" selection-start="313" selection-end="313" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/Snake.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="100" column="34" selection-start="3173" selection-end="3173" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyPanel.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="8" selection-start="381" selection-end="381" vertical-scroll-proportion="0.0">
-          <folding>
-            <element signature="e#133#170#0" expanded="false" />
-            <element signature="e#603#650#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/World.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="22" column="19" selection-start="564" selection-end="564" vertical-scroll-proportion="0.0">
+        <state line="0" column="24" selection-start="24" selection-end="24" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/Game.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="5" selection-start="322" selection-end="322" vertical-scroll-proportion="0.0">
-          <folding />
+        <state line="8" column="35" selection-start="188" selection-end="188" vertical-scroll-proportion="0.0">
+          <folding>
+            <element signature="e#188#609#0" expanded="true" />
+            <element signature="e#602#603#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/MainFrame.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="15" column="19" selection-start="363" selection-end="363" vertical-scroll-proportion="0.0">
+        <state line="5" column="6" selection-start="101" selection-end="101" vertical-scroll-proportion="0.0">
           <folding>
-            <element signature="e#484#609#0" expanded="true" />
-            <element signature="e#598#599#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#933#1088#0" expanded="true" />
+            <element signature="e#1077#1078#0" expanded="true" />
+            <element signature="e#1256#1469#0" expanded="true" />
+            <element signature="e#1458#1459#0" expanded="true" />
+            <element signature="e#2528#2655#0" expanded="true" />
+            <element signature="e#2644#2645#0" expanded="true" />
+            <element signature="e#2665#2696#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/MyFrame.java">
+    <entry file="file://$PROJECT_DIR$/src/Snake.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="62" column="130" selection-start="1760" selection-end="1760" vertical-scroll-proportion="1.4887984">
-          <folding>
-            <element signature="e#2641#2766#0" expanded="true" />
-            <element signature="e#2755#2756#0" expanded="true" />
-            <element signature="e#2776#2807#0" expanded="false" />
-          </folding>
+        <state line="91" column="39" selection-start="2979" selection-end="2979" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/Wall.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="10" column="5" selection-start="239" selection-end="239" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/World.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="16" column="35" selection-start="399" selection-end="399" vertical-scroll-proportion="-0.00407332">
+          <folding />
         </state>
       </provider>
     </entry>

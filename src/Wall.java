@@ -3,15 +3,11 @@ import java.awt.geom.Rectangle2D;
 class Wall {
     protected int x, y, width, height;
 
-    Wall(int x, int y, int xsize, int ysize) {
+    Wall(int x, int y, int width, int height) {
         this.x = x;
         this.y = y;
-        this.width = xsize;
-        this.height = ysize;
-    }
-
-    Rectangle2D getShape() {
-        return new Rectangle2D.Double(x, y, width, height);
+        this.width = width;
+        this.height = height;
     }
 
     public int getX() {
