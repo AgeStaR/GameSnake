@@ -8,6 +8,7 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
  * To change this template use File | Settings | File Templates.
  */
 
+// Обработчик столкновений. Не миру же обрабатывать столкновения.
 public class CollisionDetector
 {
     private Snake snake;
@@ -19,7 +20,12 @@ public class CollisionDetector
         this.walls = walls;
     }
 
-    public boolean collides()
+    public boolean isSelfCollision()
+    {
+        throw new NotImplementedException();
+    }
+
+    public boolean isWallCollision()
     {
         throw new NotImplementedException();
     }

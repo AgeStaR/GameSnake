@@ -1,3 +1,5 @@
+import sun.reflect.generics.reflectiveObjects.NotImplementedException;
+
 import javax.swing.*;
 import java.awt.*;
 
@@ -8,7 +10,7 @@ import java.awt.*;
  * Time: 1:32
  * To change this template use File | Settings | File Templates.
  */
-public class World extends JPanel
+public class World
 {
     private Snake snake;
     private Wall[] walls;
@@ -19,9 +21,9 @@ public class World extends JPanel
         this.walls = walls;
     }
 
-    @Override
-    protected void printComponent(Graphics g)
+    // Здесь обрабатываются столкновения и передвижения змеи. Лучшего названия придумать не смог. :(
+    public void tick()
     {
-        super.printComponent(g);    //To change body of overridden methods use File | Settings | File Templates.
+        throw new NotImplementedException();
     }
 }

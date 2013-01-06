@@ -7,6 +7,7 @@ import java.awt.geom.Rectangle2D;
  * Time: 0:09
  * To change this template use File | Settings | File Templates.
  */
+
 class Block {
 
     public static final int WIDTH = 10;

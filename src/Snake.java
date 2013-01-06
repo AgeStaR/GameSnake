@@ -84,5 +84,3 @@ public class Snake
         return direction;
     }
 }
-
-enum Direction {Up, Down, Left, Right};
