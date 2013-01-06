@@ -95,9 +95,13 @@ public class Snake extends JPanel
     public void paintComponent(Graphics g) {
         super.paintComponents(g);    //To change body of overridden methods use File | Settings | File Templates.
 
-        g.setColor(Color.green);
         for (int i = 1; i < body.size(); i++) {
-            g.fillRect(body.get(i).getX(), body.get(i).getY(), Block.WIDTH, Block.HEIGTH);
+            int x = body.get(i).getX();
+            int y = body.get(i).getY();
+            g.setColor(Color.GREEN);
+            g.fillRect(x, y, Block.WIDTH, Block.HEIGTH);
+            g.setColor(Color.BLACK);
+            g.drawRect(x, y, Block.WIDTH, Block.HEIGTH);
         }
         g.setColor(Color.red);
         g.fillRect(body.get(0).getX(), body.get(0).getY(), Block.WIDTH, Block.HEIGTH);

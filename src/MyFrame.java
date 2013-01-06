@@ -51,25 +51,7 @@ class MyFrame extends JFrame {
             }
         });
 
-        this.addKeyListener(new KeyAdapter() {
-            @Override
-            public void keyPressed(KeyEvent e) {
-//                switch (e.getKeyCode()) {
-//                    case KeyEvent.VK_DOWN:
-//                        turnDown();
-//                        break;
-//                    case KeyEvent.VK_UP:
-//                        turnUp();
-//                        break;
-//                    case KeyEvent.VK_LEFT:
-//                        turnLeft();
-//                        break;
-//                    case KeyEvent.VK_RIGHT:
-//                        turnRight();
-//                        break;
-//                }
-            }
-        });
+        this.addKeyListener(new SnakeController(snake));
         this.addMouseListener(new MouseAdapter() {
 
             @Override
@@ -102,6 +84,15 @@ class MyFrame extends JFrame {
     private void start() {
         PrimeThread thread = new PrimeThread(world ,this.snakePanel);
         thread.start();
+    }
+
+    public static void main(String[] args) {
+        SwingUtilities.invokeLater(new Runnable() {
+            @Override
+            public void run() {
+                new MyFrame();
+            }
+        });
     }
 
 //    private void turnLeft() {
