@@ -14,11 +14,25 @@ public class CollisionDetector
 
     public boolean isSelfCollision()
     {
-        throw new NotImplementedException();
+        for (int i = 1; i < snake.getBody().size(); i++) {
+            if (snake.getHead().getX() == snake.getBody().get(i).getX() &&
+                    snake.getHead().getY() == snake.getBody().get(i).getY()) {
+                return true;
+            }
+        }
+        return false;
     }
 
     public boolean isWallCollision()
     {
-        throw new NotImplementedException();
+        for (Wall wall : walls) {
+            if (snake.getHead().getX()+5 >= wall.getX() &&
+                    snake.getHead().getY()+5 >= wall.getY() &&
+                    snake.getHead().getX()+ 5 <= wall.getX() + wall.getWidth() &&
+                    snake.getHead().getY()+ 5 <= wall.getY() + wall.getHeight()) {
+                return true;
+            }
+        }
+        return false;
     }
 }

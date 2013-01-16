@@ -8,7 +8,7 @@ public class World extends JPanel
 {
     private Snake snake;
     private ArrayList<Wall> walls;
-    CollisionDetector collisionDetector;
+    private CollisionDetector collisionDetector;
 
     public World(Snake snake) {
         this(snake, new ArrayList<Wall>(0));
@@ -36,4 +36,9 @@ public class World extends JPanel
     public Snake getSnake() {
         return snake;
     }
+    
+    public CollisionDetector getCollisionDetector(){
+        return collisionDetector;
+    }
+    
 }

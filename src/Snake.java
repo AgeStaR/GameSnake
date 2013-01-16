@@ -96,4 +96,13 @@ public class Snake
     {
         return direction;
     }
+    
+    public ArrayList<Block> getBody() {
+        return body;
+    }
+    
+    public Block getHead() {
+        return body.get(0);
+    }
+    
 }

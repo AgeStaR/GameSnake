@@ -91,23 +91,4 @@ class MainFrame extends JFrame {
         });
     }
 
-//    private void turnLeft() {
-//        game.setH(0);
-//        game.setW(-10);
-//    }
-//
-//    private void turnRight() {
-//        game.setH(0);
-//        game.setW(10);
-//    }
-//
-//    private void turnUp() {
-//        game.setH(-10);
-//        game.setW(0);
-//    }
-//
-//    private void turnDown() {
-//        game.setH(10);
-//        game.setW(0);
-//    }
 }

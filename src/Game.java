@@ -2,21 +2,30 @@ import java.awt.*;
 import java.util.Vector;
 import javax.swing.*;
 
-
 class Game extends JPanel {
     private World world;
     private boolean run = true;
     Thread gameThread = new Thread(new Runnable() {
         @Override
         public void run() {
-            while (run) {
+            try {
+                while (run) {
                 repaint();
                 world.tick();
                 try {
+                    System.out.println(world.getCollisionDetector().isSelfCollision());
+                    if (world.getCollisionDetector().isSelfCollision() ||
+                            world.getCollisionDetector().isWallCollision()) {
+                        throw new InterruptedException(); 
+                    }
                     Thread.sleep(150);
                 } catch (InterruptedException e) {
                     e.printStackTrace();  //To change body of catch statement use File | Settings | File Templates.
+                    throw new Exception();
                 }
+            }
+            }catch(Exception exc) {              // Exception for Exit.
+                
             }
         }
     });
