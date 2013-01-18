@@ -13,7 +13,6 @@ class Game extends JPanel {
                 repaint();
                 world.tick();
                 try {
-                    System.out.println(world.getCollisionDetector().isSelfCollision());
                     if (world.getCollisionDetector().isSelfCollision() ||
                             world.getCollisionDetector().isWallCollision()) {
                         throw new InterruptedException(); 

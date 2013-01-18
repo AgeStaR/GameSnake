@@ -78,8 +78,11 @@ class MainFrame extends JFrame {
         walls.add(new Wall(0, 100, 400, 10));
         walls.add(new Wall(80, 300, 350, 10));
         walls.add(new Wall(150, 500, 350, 10));
+        
+        Food food = new Food(walls, 8);
+        food.generateFood();
         this.snake = new Snake();
-        this.world = new World(snake, walls);
+        this.world = new World(snake, walls, food);
     }
 
     public static void main(String[] args) {

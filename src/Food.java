@@ -18,14 +18,22 @@ public class Food {
         this.n = n;
     }
     
+    public void ateMeat(int n) {
+        meats.remove(n);
+    }
+    
+    public ArrayList<Meat> getFood() {
+        return meats;
+    }
+    
     public void generateFood() {
         Meat buf;
         int xBuf;
         int yBuf;
         boolean right = false;
         while (meats.size() <= n) {
-            xBuf = ((random.nextInt(500)/10))*10+5;
-            yBuf = ((random.nextInt(500))/10)*10+5;
+            xBuf = ((random.nextInt(500)/10))*10;
+            yBuf = ((random.nextInt(500))/10)*10;
             buf = new Meat(xBuf, yBuf);
             right = true;
             for (int i = 0; i < this.walls.size(); i++) {
@@ -40,7 +48,6 @@ public class Food {
             }
             if (right) 
                 meats.add(buf);
-            System.out.println(meats.size());
         }
     }
     
