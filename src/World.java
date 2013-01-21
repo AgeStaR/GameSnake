@@ -48,8 +48,6 @@ public class World extends JPanel
         g.setColor(Color.GRAY);
         for (Wall wall : walls)
             g.fillRect(wall.getX(), wall.getY(), wall.getWidth(), wall.getHeight());
-        
-        
     }
 
     public Snake getSnake() {
