@@ -31,7 +31,7 @@ public class Food {
         int xBuf;
         int yBuf;
         boolean right = false;
-        while (meats.size() <= n) {
+        while (meats.size() < n) {
             xBuf = ((random.nextInt(500)/10))*10;
             yBuf = ((random.nextInt(500))/10)*10;
             buf = new Meat(xBuf, yBuf);
@@ -55,6 +55,10 @@ public class Food {
         g.setColor(Color.ORANGE);
         for (Meat meat : meats) {
             g.fillOval(meat.getX(), meat.getY(), 8, 8);
+        }
+        g.setColor(Color.black);
+        for (Meat meat : meats) {
+            g.drawOval(meat.getX(), meat.getY(), 8, 8);
         }
     }
     

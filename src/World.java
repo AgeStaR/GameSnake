@@ -45,6 +45,11 @@ public class World extends JPanel
         g.setColor(Color.gray);
         snake.draw(g);
         food.draw(g);
+        
+        g.setColor(Color.black);
+        for (Wall wall : walls)
+            g.drawRect(wall.getX()-1, wall.getY()-1, wall.getWidth()+1, wall.getHeight()+1);      // Shape
+        
         g.setColor(Color.GRAY);
         for (Wall wall : walls)
             g.fillRect(wall.getX(), wall.getY(), wall.getWidth(), wall.getHeight());
@@ -52,6 +57,10 @@ public class World extends JPanel
 
     public Snake getSnake() {
         return snake;
+    }
+    
+    public Food getFood() {
+        return food;
     }
     
     public CollisionDetector getCollisionDetector(){

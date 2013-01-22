@@ -17,13 +17,22 @@ class Game extends JPanel {
                             world.getCollisionDetector().isWallCollision()) {
                         throw new InterruptedException(); 
                     }
+                    if (world.getFood().getFood().isEmpty() == true) {
+                        run = false;
+                    }
                     Thread.sleep(150);
                 } catch (InterruptedException e) {
                     throw new Exception();
                 }
             }
             }catch(Exception exc) {              // Exception for Exit.
-                
+                GameMenuFrame.level = 1;
+                GameMenuFrame.setAdvanceGame(false);
+            }
+            finally {
+                GameMenuFrame.level++;
+                GameMenuFrame.setAdvanceGame(true);
+                System.out.print(GameMenuFrame.level);
             }
         }
     });
