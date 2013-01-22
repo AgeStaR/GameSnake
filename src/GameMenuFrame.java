@@ -4,12 +4,18 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JButton;
 import javax.swing.JFrame;
+import javax.swing.JPanel;
 import javax.swing.SwingUtilities;
 public class GameMenuFrame extends JFrame {
     private static JButton buttonNewStartGame, buttonExit, buttonContinueGame;
     static int level = 1;
     
     GameMenuFrame() {
+        setTitle("Snake menu");
+        JPanel panel = new JPanel();
+        panel.setLayout(new BorderLayout());
+        ImagePanel imagePanel = new ImagePanel();
+        
         this.buttonNewStartGame = new JButton("Start new game");
         buttonNewStartGame.addActionListener(new ActionListener() {
             public void actionPerformed(ActionEvent e) {
@@ -44,11 +50,16 @@ public class GameMenuFrame extends JFrame {
             GameMenuFrame.buttonContinueGame.setEnabled(false);
         }
         
-        add(GameMenuFrame.buttonNewStartGame, BorderLayout.CENTER);
-        add(GameMenuFrame.buttonExit, BorderLayout.SOUTH);
-        add(GameMenuFrame.buttonContinueGame, BorderLayout.NORTH);
         
-        setSize(100, 110);
+        panel.add(GameMenuFrame.buttonNewStartGame, BorderLayout.CENTER);
+        panel.add(GameMenuFrame.buttonExit, BorderLayout.SOUTH);
+        panel.add(GameMenuFrame.buttonContinueGame, BorderLayout.NORTH);
+        
+        add(panel, BorderLayout.NORTH);
+        add(imagePanel, BorderLayout.CENTER);
+        
+        
+        setSize(600, 600);
         setLocation(500, 200);
         setResizable(false);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

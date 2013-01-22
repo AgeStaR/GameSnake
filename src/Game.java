@@ -4,6 +4,7 @@ import javax.swing.*;
 
 class Game extends JPanel {
     private World world;
+    private JFrame gameFrame;
     private boolean run = true;
     Thread gameThread = new Thread(new Runnable() {
         @Override
@@ -25,21 +26,23 @@ class Game extends JPanel {
                     throw new Exception();
                 }
             }
+                GameMenuFrame.level++;
+                GameMenuFrame.setAdvanceGame(true);
+                JOptionPane.showMessageDialog(gameFrame, "Вы прошли уровень!\nТеперь в меню вам доступен следущий.");
+                gameFrame.dispose();
             }catch(Exception exc) {              // Exception for Exit.
                 GameMenuFrame.level = 1;
                 GameMenuFrame.setAdvanceGame(false);
-            }
-            finally {
-                GameMenuFrame.level++;
-                GameMenuFrame.setAdvanceGame(true);
-                System.out.print(GameMenuFrame.level);
+                JOptionPane.showMessageDialog(gameFrame, "Вы проиграли!\nПридется начать сначала.");
+                gameFrame.dispose();
             }
         }
     });
 
-    public Game(World world) {
+    public Game(World world, JFrame frame) {
         setBorder(BorderFactory.createLineBorder(Color.black));
         this.world = world;
+        this.gameFrame = frame;
     }
 
     @Override
