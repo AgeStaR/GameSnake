@@ -1,50 +1,30 @@
-import java.awt.*;
+
+import java.awt.Color;
+import java.awt.Graphics;
 import java.util.ArrayList;
-import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 
-import javax.swing.*;
 
-public class World extends JPanel
-{
-    private Snake snake;
-    private ArrayList<Wall> walls;
-    private CollisionDetector collisionDetector;
-    private Food food;
-
-    public World(Snake snake) {
-        this(snake, new ArrayList<Wall>(0));
-    }
-
-    public World(Snake snake, ArrayList<Wall> walls)
-    {
-        this.snake = snake;
-        this.walls = walls;
-        collisionDetector = new CollisionDetector(snake, walls);
-    }
+public class World {
     
-    public World(Snake snake, ArrayList<Wall> walls, Food food) {
-        this.snake = snake;
-        this.walls = walls;
-        this.food = food;
-        collisionDetector = new CollisionDetector(snake, walls);
-    }
-
-    public void tick()
-    {
-        snake.move();
-        for (int i = 0; i < food.getFood().size(); i++) {
-            if (snake.getHead().getX() == food.getFood().get(i).getX() &&
-                    snake.getHead().getY() == food.getFood().get(i).getY()) {
-                food.ateMeat(i);
-                snake.increase();
-            }
+    private ArrayList<Wall> walls;
+    World(int level) {
+        walls = new ArrayList<Wall>();
+        walls.add(new Wall(0, 0, 600, 20));
+        walls.add(new Wall(0, 0, 20, 600));
+        walls.add(new Wall(0, 571, 600, 600));
+        walls.add(new Wall(571, 0, 600, 600));
+        switch(level) {
+            case 1: initWorldLevelOne(); break;
+            case 2: initWorldLevelTwo(); break;
+            case 3: initWorldLevelThree(); break;
         }
     }
     
+    public ArrayList<Wall> getWalls() {
+        return walls;
+    }
+    
     public void draw(Graphics g) {
-        g.setColor(Color.gray);
-        snake.draw(g);
-        food.draw(g);
         
         g.setColor(Color.black);
         for (Wall wall : walls)
@@ -54,17 +34,20 @@ public class World extends JPanel
         for (Wall wall : walls)
             g.fillRect(wall.getX(), wall.getY(), wall.getWidth(), wall.getHeight());
     }
-
-    public Snake getSnake() {
-        return snake;
+    
+    private void initWorldLevelOne() {
+        walls.add(new Wall(300, 100, 30, 400));
+        walls.add(new Wall(100, 300, 400, 30));
+        
     }
     
-    public Food getFood() {
-        return food;
+    private void initWorldLevelTwo() {
+        walls.add(new Wall(0, 100, 400, 10));
+        walls.add(new Wall(80, 300, 350, 10));
+        walls.add(new Wall(150, 500, 350, 10));
     }
     
-    public CollisionDetector getCollisionDetector(){
-        return collisionDetector;
+    private void initWorldLevelThree() {
     }
     
 }

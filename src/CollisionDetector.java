@@ -4,12 +4,12 @@ import sun.reflect.generics.reflectiveObjects.NotImplementedException;
 public class CollisionDetector
 {
     private Snake snake;
-    private ArrayList<Wall> walls;
+    private World world;
 
-    public CollisionDetector(Snake snake, ArrayList<Wall> walls)
+    public CollisionDetector(Snake snake, World world)
     {
         this.snake = snake;
-        this.walls = walls;
+        this.world = world;
     }
 
     public boolean isSelfCollision()
@@ -25,7 +25,7 @@ public class CollisionDetector
 
     public boolean isWallCollision()
     {
-        for (Wall wall : walls) {
+        for (Wall wall : world.getWalls()) {
             if (snake.getHead().getX()+5 >= wall.getX() &&
                     snake.getHead().getY()+5 >= wall.getY() &&
                     snake.getHead().getX()+ 5 <= wall.getX() + wall.getWidth() &&

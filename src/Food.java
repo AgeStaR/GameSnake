@@ -9,12 +9,12 @@ public class Food {
     
     private Random random = new Random();
     private ArrayList<Meat> meats;
-    private ArrayList<Wall> walls;
+    private World world;
     private int n;
     
-    public Food(ArrayList<Wall> walls, int n) {
+    public Food(World world, int n) {
         this.meats = new ArrayList();
-        this.walls = walls;
+        this.world = world;
         this.n = n;
     }
     
@@ -36,11 +36,11 @@ public class Food {
             yBuf = ((random.nextInt(500))/10)*10;
             buf = new Meat(xBuf, yBuf);
             right = true;
-            for (int i = 0; i < this.walls.size(); i++) {
-            if (buf.getX()  > this.walls.get(i).getX() + this.walls.get(i).getWidth() ||
-                    buf.getX()  < this.walls.get(i).getX() ||
-                    buf.getY()  < this.walls.get(i).getY() ||
-                    buf.getY()  > this.walls.get(i).getY() + this.walls.get(i).getHeight()) {
+            for (int i = 0; i < this.world.getWalls().size(); i++) {
+            if (buf.getX()  > this.world.getWalls().get(i).getX() + this.world.getWalls().get(i).getWidth() ||
+                    buf.getX()  < this.world.getWalls().get(i).getX() ||
+                    buf.getY()  < this.world.getWalls().get(i).getY() ||
+                    buf.getY()  > this.world.getWalls().get(i).getY() + this.world.getWalls().get(i).getHeight()) {
                 
                 continue;
                 }

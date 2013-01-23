@@ -3,8 +3,8 @@ import java.util.Vector;
 import javax.swing.*;
 
 class Game extends JPanel {
-    private World world;
-    private JFrame gameFrame;
+    private Level level;
+    private GameMenuFrame frame;
     private boolean run = true;
     Thread gameThread = new Thread(new Runnable() {
         @Override
@@ -12,13 +12,13 @@ class Game extends JPanel {
             try {
                 while (run) {
                 repaint();
-                world.tick();
+                level.tick();
                 try {
-                    if (world.getCollisionDetector().isSelfCollision() ||
-                            world.getCollisionDetector().isWallCollision()) {
+                    if (level.getCollisionDetector().isSelfCollision() ||
+                            level.getCollisionDetector().isWallCollision()) {
                         throw new InterruptedException(); 
                     }
-                    if (world.getFood().getFood().isEmpty() == true) {
+                    if (level.getFood().getFood().isEmpty() == true) {
                         run = false;
                     }
                     Thread.sleep(150);
@@ -26,33 +26,28 @@ class Game extends JPanel {
                     throw new Exception();
                 }
             }
-                GameMenuFrame.level++;
-                GameMenuFrame.setAdvanceGame(true);
-                JOptionPane.showMessageDialog(gameFrame, "Вы прошли уровень!\nТеперь в меню вам доступен следущий.");
-                gameFrame.dispose();
+                GameMenuFrame.gameLevel++;
+                frame.createGame(GameMenuFrame.gameLevel);
             }catch(Exception exc) {              // Exception for Exit.
-                GameMenuFrame.level = 1;
-                GameMenuFrame.setAdvanceGame(false);
-                JOptionPane.showMessageDialog(gameFrame, "Вы проиграли!\nПридется начать сначала.");
-                gameFrame.dispose();
+                GameMenuFrame.gameLevel = 1;
+                
             }
         }
     });
 
-    public Game(World world, JFrame frame) {
-        setBorder(BorderFactory.createLineBorder(Color.black));
-        this.world = world;
-        this.gameFrame = frame;
+    public Game(Level level, GameMenuFrame frame) {
+        this.level = level;
+        this.frame = frame;
     }
 
     @Override
     public void paintComponent(Graphics g) {
         super.paintComponent(g);
-        world.draw(g);
+        level.draw(g);
     }
 
-    public World getWorld() {
-        return world;
+    public Level getLevel() {
+        return level;
     }
 
     public void start() {
